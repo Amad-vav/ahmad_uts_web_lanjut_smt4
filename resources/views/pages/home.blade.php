@@ -9,9 +9,9 @@
         </div>
     @endif
 
-    <div class="flex items-center justify-between mb-6 px-4 sm:px-6 lg:px-8">
-        <div>
-            <h1 class="text-5xl font-extrabold tracking-tight" style="font-family: Orbitron, sans-serif; background: linear-gradient(90deg,#7c3aed,#06b6d4); -webkit-background-clip: text; color: transparent;">Jum'at Berkah</h1>
+    <div class="flex flex-col gap-4 items-start justify-between mb-6 px-4 sm:px-6 lg:px-8 lg:flex-row">
+        <div class="min-w-0">
+            <h1 class="text-5xl font-extrabold tracking-tight break-words" style="font-family: Orbitron, sans-serif; background: linear-gradient(90deg,#7c3aed,#06b6d4); -webkit-background-clip: text; color: transparent;">Jum'at Berkah</h1>
             <p class="text-slate-300 mt-2">Temukan masjid yang menerima sumbangan makanan dan dukung kegiatan berbagi.</p>
         </div>
         <div class="space-x-2">
@@ -50,10 +50,9 @@
                     </div>
                 </div>
                 <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <p class="text-sm text-gray-600">Kelola catatan donasi dari tombol di bawah untuk memperbarui atau menghapus entri.</p>
+                    <p class="text-sm text-gray-600">Kelola catatan donasi dari halaman donasi untuk memperbarui atau menghapus entri.</p>
                     <div class="flex flex-wrap gap-3">
                         <a href="{{ route('donations.index') }}" class="inline-flex items-center justify-center rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-500 transition">Lihat Donasi</a>
-                        <a href="{{ route('donations.index') }}" class="inline-flex items-center justify-center rounded-full bg-rose-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-rose-500 transition">Edit / Hapus</a>
                     </div>
                 </div>
             </div>

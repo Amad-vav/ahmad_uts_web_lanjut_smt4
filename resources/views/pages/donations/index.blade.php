@@ -18,19 +18,20 @@
     </div>
 
     <div class="overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70 shadow-lg">
-        <table class="min-w-full divide-y divide-white/10 text-sm text-left text-slate-200">
-            <thead class="bg-slate-900/80 text-xs uppercase tracking-wide text-slate-400">
-                <tr>
-                    <th class="px-4 py-3">ID</th>
-                    <th class="px-4 py-3">Masjid</th>
-                    <th class="px-4 py-3">Nama Donatur</th>
-                    <th class="px-4 py-3">Email</th>
-                    <th class="px-4 py-3">Jumlah</th>
-                    <th class="px-4 py-3">Pesan</th>
-                    <th class="px-4 py-3">Tanggal</th>
-                    <th class="px-4 py-3">Aksi</th>
-                </tr>
-            </thead>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-white/10 text-sm text-left text-slate-200">
+                <thead class="bg-slate-900/80 text-xs uppercase tracking-wide text-slate-400">
+                    <tr>
+                        <th class="px-4 py-3">ID</th>
+                        <th class="px-4 py-3">Masjid</th>
+                        <th class="px-4 py-3">Nama Donatur</th>
+                        <th class="px-4 py-3">Email</th>
+                        <th class="px-4 py-3">Jumlah</th>
+                        <th class="px-4 py-3">Pesan</th>
+                        <th class="px-4 py-3">Tanggal</th>
+                        <th class="px-4 py-3">Aksi</th>
+                    </tr>
+                </thead>
             <tbody class="divide-y divide-white/10 bg-slate-950/70">
                 @forelse($donations as $donation)
                     <tr class="hover:bg-white/5 transition-colors">
@@ -58,6 +59,7 @@
                 @endforelse
             </tbody>
         </table>
+        </div>
     </div>
 
     <div class="mt-6">

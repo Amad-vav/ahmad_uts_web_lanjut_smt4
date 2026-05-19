@@ -39,11 +39,22 @@
             </div>
 
             <div class="mt-6 bg-gradient-to-br from-gray-50 to-gray-100 p-4 rounded-xl shadow-lg border border-gray-200">
-                <h3 class="font-semibold text-lg text-gray-900">Statistik Singkat</h3>
-                <div class="mt-3 space-y-2 text-gray-700">
-                    <div class="flex justify-between"><span>Masjid Terdaftar</span><span class="font-semibold">{{ $mosques->count() }}</span></div>
-                    <div class="flex justify-between"><span>Total Donasi (tercatat)</span><span class="font-semibold">{{ number_format($totalDonations ?: 0, 0, ',', '.') }}</span></div>
-                    <div class="flex justify-between"><span>Jumlah Donasi</span><span class="font-semibold">{{ $totalDonationCount }}</span></div>
+                <div class="flex items-start justify-between gap-4">
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-900">Statistik Singkat</h3>
+                        <div class="mt-3 space-y-2 text-gray-700">
+                            <div class="flex justify-between"><span>Masjid Terdaftar</span><span class="font-semibold">{{ $mosques->count() }}</span></div>
+                            <div class="flex justify-between"><span>Total Donasi (tercatat)</span><span class="font-semibold">{{ number_format($totalDonations ?: 0, 0, ',', '.') }}</span></div>
+                            <div class="flex justify-between"><span>Jumlah Donasi</span><span class="font-semibold">{{ $totalDonationCount }}</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <p class="text-sm text-gray-600">Kelola catatan donasi dari tombol di bawah untuk memperbarui atau menghapus entri.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="{{ route('donations.index') }}" class="inline-flex items-center justify-center rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-500 transition">Lihat Donasi</a>
+                        <a href="{{ route('donations.index') }}" class="inline-flex items-center justify-center rounded-full bg-rose-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-rose-500 transition">Edit / Hapus</a>
+                    </div>
                 </div>
             </div>
         </div>
